@@ -1,0 +1,27 @@
+{
+   "$schema":"https://schemas.wp.org/trunk/block.json",
+   "apiVersion":3,
+   "name":"lwl-blocks-base/section",
+   "version":"1.0.0",
+   "title":"Section",
+   "category":"design",
+   "icon":"layout",
+   "description":"Page section",
+   "example":{},
+   "supports":{
+                 "html":false,
+                 "anchor":true,
+                 "background":{"backgroundImage":true}
+              },
+   "attributes":{
+                   "anchor":{"type":"string"},
+						 "has_inner":{"type":"boolean","default":true},
+						 "inner_className":{"type":"string","default":"inner"}
+				    },
+   "textdomain":"lwl-blocks-base",
+   "editorScript":"file:./index.js",
+   "editorStyle":"file:./index.css",
+   "style":"file:./style-index.css",
+   "render":"file:./render.php",
+   "viewScript":"file:./view.js"
+}

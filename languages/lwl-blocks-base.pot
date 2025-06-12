@@ -1,0 +1,92 @@
+# Copyright (C) 2025 FSG a.k.a ManiaC
+# This file is distributed under the GPL-3.0.
+msgid ""
+msgstr ""
+"Project-Id-Version: LWL-Blocks [Base] 1.0.0\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/lwl-blocks-base\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2025-06-12T09:42:54+00:00\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"X-Generator: WP-CLI 2.12.0\n"
+"X-Domain: lwl-blocks-base\n"
+
+#. Plugin Name of the plugin
+#: custom-block.php
+msgid "LWL-Blocks [Base]"
+msgstr ""
+
+#. Description of the plugin
+#: custom-block.php
+msgid "Light-Weight-Layout Blocks - Base collection."
+msgstr ""
+
+#. Author of the plugin
+#: custom-block.php
+msgid "FSG a.k.a ManiaC"
+msgstr ""
+
+#. Author URI of the plugin
+#: custom-block.php
+msgid "http://maniacalipsis.ru/"
+msgstr ""
+
+#: build/items-list/index.js:62
+#: build/section/index.js:58
+#: src/items-list/edit.js:31
+#: src/section/edit.js:24
+#: build/items-list/index.js:31
+#: build/section/index.js:24
+msgid "Inner's additional CSS class[es]"
+msgstr ""
+
+#: build/section/index.js:51
+#: src/section/edit.js:23
+#: build/section/index.js:23
+msgid "Has inner"
+msgstr ""
+
+#: build/section/index.js:52
+#: src/section/edit.js:23
+#: build/section/index.js:23
+msgid "Render section with additional inner element commonly used in designs with limited content width."
+msgstr ""
+
+#: build/image-header-text/block.json
+#: src/image-header-text/block.json
+msgctxt "block title"
+msgid "Image-Header-Text"
+msgstr ""
+
+#: build/image-header-text/block.json
+#: src/image-header-text/block.json
+msgctxt "block description"
+msgid "List of items with image, header and text"
+msgstr ""
+
+#: build/items-list/block.json
+#: src/items-list/block.json
+msgctxt "block title"
+msgid "Items List"
+msgstr ""
+
+#: build/items-list/block.json
+#: src/items-list/block.json
+msgctxt "block description"
+msgid "All its inner blocks has to be one of certain types."
+msgstr ""
+
+#: build/section/block.json
+#: src/section/block.json
+msgctxt "block title"
+msgid "Section"
+msgstr ""
+
+#: build/section/block.json
+#: src/section/block.json
+msgctxt "block description"
+msgid "Page section"
+msgstr ""

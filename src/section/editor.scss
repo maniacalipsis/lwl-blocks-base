@@ -1,0 +1,30 @@
+.wp-block-lwl-blocks-base-section
+{
+   --block-padding-h:0.5em;
+
+   border:1px solid #666666;
+}
+
+.wp-block-lwl-blocks-base-section>.params
+{
+   background:linear-gradient(180deg,#00000042,#0000000E 1.2em,#00000008 0.6em);
+   padding:1em var(--block-padding-h) 0.5em var(--block-padding-h);
+   margin-bottom:0.5em;
+}
+
+.wp-block-lwl-blocks-base-section>.block-editor-inner-blocks
+{
+   min-height:1.2em;
+   padding:1px var(--block-padding-h);   /*1px fixes for outbounding margins of inner elements.*/
+}
+.wp-block-lwl-blocks-base-section>.block-editor-inner-blocks:has(.block-editor-block-list__layout:empty)::after
+{
+   content:'+';
+   cursor:pointer;
+}
+
+.wp-block-lwl-blocks-base-section>.ending
+{
+   padding:0.25em var(--block-padding-h);
+   background:linear-gradient(0deg,#00000042,#0000000E);
+}

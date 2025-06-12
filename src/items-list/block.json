@@ -1,0 +1,31 @@
+{
+   "$schema":"https://schemas.wp.org/trunk/block.json",
+   "apiVersion":3,
+   "name":"lwl-blocks-base/items-list",
+   "version":"1.0.0",
+   "title":"Items List",
+   "category":"design",
+   "icon":"grid-view",
+   "description":"All its inner blocks has to be one of certain types.",
+   "example":{},
+   "supports":{
+                 "html":false,
+                 "anchor":true
+              },
+   "attributes":{
+                   "anchor":{"type":"string"},
+                   "content_blocks_type":{
+                                            "type":"string",
+                                            "enum":[
+                                                      "lwl-blocks-base/image-header-text"
+                                                   ],
+                                            "default":"lwl-blocks-base/image-header-text"
+                                         }
+				    },
+   "textdomain":"lwl-blocks-base",
+   "editorScript":"file:./index.js",
+   "editorStyle":"file:./index.css",
+   "style":"file:./style-index.css",
+   "render":"file:./render.php",
+   "viewScript":"file:./view.js"
+}

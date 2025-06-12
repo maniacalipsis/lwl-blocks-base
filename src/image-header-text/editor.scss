@@ -1,0 +1,52 @@
+/**
+ * The following styles get applied inside the editor only.
+ *
+ * Replace them with your own styles or remove the file completely.
+ */
+
+.wp-block-lwl-blocks-base-image-header-text
+{
+   padding:0.25em 0.5em;
+   border:1px solid #666666;
+}
+
+.wp-block-lwl-blocks-base-image-header-text>button.image
+{
+   position:relative;
+   padding:0.5em 0.5em;
+   border:1px solid #666666;
+   background:none #0000000F;
+}
+.wp-block-lwl-blocks-base-image-header-text>button.image:has(img)
+{
+   width:10em;
+   height:10em;
+}
+
+.wp-block-lwl-blocks-base-image-header-text>button.image>img
+{
+   position:absolute;
+   top:0;
+   left:0;
+   width:100%;
+   height:100%;
+   object-fit:cover;
+   object-position:center;
+}
+
+.wp-block-lwl-blocks-base-image-header-text>.components-flex.header
+{
+   align-items:flex-end;
+}
+
+.wp-block-lwl-blocks-base-image-header-text>.components-flex.header>:last-child
+{
+   flex:1 1 auto;
+}
+
+.wp-block-lwl-blocks-base-image-header-text>.components-base-control>.components-base-control__field>.block-editor-inner-blocks
+{
+   min-height:1.2em;
+   padding:1px var(--block-padding-h);   /*1px fixes for outbounding margins of inner elements.*/
+   border:1px solid #666666;
+}
