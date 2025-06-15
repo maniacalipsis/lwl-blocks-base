@@ -4,7 +4,7 @@
  * Replace them with your own styles or remove the file completely.
  */
 
-.wp-block-lwl-blocks-base-items-list
+.wp-block-lwl-blocks-base-block
 {
    box-sizing:border-box;
    padding:0.25em 0.5em;
@@ -12,12 +12,12 @@
    box-shadow:inset 0 1px 5px #00000050;
 }
 
-.wp-block-lwl-blocks-base-items-list>.block-editor-inner-blocks
+.wp-block-lwl-blocks-base-block>.block-editor-inner-blocks
 {
    min-height:1.2em;
    padding:1px var(--block-padding-h);   /*1px fixes for outbounding margins of inner elements.*/
 }
-.wp-block-lwl-blocks-base-items-list>.block-editor-inner-blocks:has(.block-editor-block-list__layout:empty)::after
+.wp-block-lwl-blocks-base-block>.block-editor-inner-blocks:has(.block-editor-block-list__layout:empty)::after
 {
    content:'+';
    cursor:pointer;

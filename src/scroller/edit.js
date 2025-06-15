@@ -10,7 +10,6 @@ import {
 import {
           Panel,
           PanelBody,
-          __experimentalGrid as Grid,
           BaseControl,
           TextControl,
           __experimentalNumberControl as NumberControl,
