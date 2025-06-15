@@ -22,7 +22,6 @@
 						 "inner_className":{"type":"string","default":"inner"},
                    "inner_bg_image":{"type":"object"}
 				    },
-   "parent":[],
    "textdomain":"lwl-blocks-base",
    "editorScript":"file:./index.js",
    "editorStyle":"file:./index.css",
