@@ -52,7 +52,7 @@ export function edit(props_)
             </MediaUploadCheck>
             <TextControl label={__('Header',txtD)} className="header" title={__('Header text',txtD)} value={props_.attributes.header_text} onChange={(newVal_)=>props_.setAttributes({header_text:newVal_})} />
             <BaseControl label={__('Text',txtD)} className="text">
-               <InnerBlocks allowedBlocks={['core/paragraph','core/list','core/details','core/buttons','core/quote']} defaultBlock={['core/paragraph',{placeholder:__('Text',txtD)+'...'}]}/>
+               <InnerBlocks allowedBlocks={['core/paragraph','core/list','core/details','core/buttons','core/quote']} defaultBlock={['core/paragraph',{placeholder:__('Text',txtD)+'...'}]} templateLock={props_.attributes.templateLock}/>
             </BaseControl>
          </Flex>
       </>

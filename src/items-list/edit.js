@@ -33,7 +33,7 @@ export function edit(props_)
             </Panel>
          </InspectorControls>
          <div {...useBlockProps()}>
-            <InnerBlocks allowedBlocks={[props_.attributes.content_blocks_type]} />
+            <InnerBlocks allowedBlocks={[props_.attributes.content_blocks_type]} templateLock={props_.attributes.templateLock}/>
          </div>
       </>
    );

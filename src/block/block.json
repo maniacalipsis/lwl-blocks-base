@@ -16,7 +16,8 @@
    "attributes":{
                    "anchor":{"type":"string"},
                    "className":{"type":"string","default":""},
-                   "allowedBlocks":{"type":"array","default":[]}
+                   "allowedBlocks":{"type":"array","default":[]},
+                   "templateLock":{"type":"string","enum":["","all","insert","contentOnly"],"default":""}
 				    },
    "textdomain":"lwl-blocks-base",
    "editorScript":"file:./index.js",

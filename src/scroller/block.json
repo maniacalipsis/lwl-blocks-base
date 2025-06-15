@@ -20,6 +20,7 @@
                                             "type":"string",
                                             "default":"lwl-blocks-base/image-header-text"
                                          },
+                   "templateLock":{"type":"string","enum":["","all","insert","contentOnly"],"default":""},
                    "content_className":{"type":"string","default":""},
                    "has_buttons":{"type":"boolean","default":true},
                    "scrolling_speed_val":{"type":"string","default":"100"},

@@ -5,6 +5,9 @@ import {
           InspectorControls,
        } from '@wordpress/block-editor';
 import {
+          getBlockTypes,
+       } from '@wordpress/blocks';
+import {
           Panel,
           PanelBody,
           SelectControl,
@@ -18,12 +21,15 @@ export function edit(props_)
 {
    const txtD=metadata.textdomain; //Shorthand for translation text-domain.
 
-   const allowedBlocks=props_.attributes.allowedBlocks;
+   //Support allowedBlocks restriction behind the scenes:
+   let allowedBlocks=props_.attributes.allowedBlocks;
+   if (allowedBlocks.length==0)  //If no blocks specified then all alowed.
+      allowedBlocks=getBlockTypes().map(blockType_=>blockType_.name);
 
    return (
       <>
          <div {...useBlockProps()}>
-            <InnerBlocks allowedBlocks={allowedBlocks} />
+            <InnerBlocks allowedBlocks={allowedBlocks} templateLock={props_.attributes.templateLock}/>
          </div>
       </>
    );

@@ -19,7 +19,8 @@
                    "content_blocks_type":{
                                             "type":"string",
                                             "default":"lwl-blocks-base/image-header-text"
-                                         }
+                                         },
+                   "templateLock":{"type":"string","enum":["","all","insert","contentOnly"],"default":""}
 				    },
    "textdomain":"lwl-blocks-base",
    "editorScript":"file:./index.js",
