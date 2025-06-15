@@ -4,9 +4,11 @@
  */
 namespace LWL_Blocks;
 
+$root_block_attrs=\render_block_attributes($attributes);
+$inner_block_attrs=\render_block_attributes($attributes,attrs_prefix:"inner_");
 ?>
-<SECTION <?=render_block_attributes($attributes)?>>
-   <DIV <?=render_block_attributes($attributes,attrs_prefix:"inner_")?>>
+<SECTION <?=$root_block_attrs?>>
+   <DIV <?=$inner_block_attrs?>>
    <?php
     foreach ($block->inner_blocks as $key=>$inner_block)
        echo $inner_block->render();

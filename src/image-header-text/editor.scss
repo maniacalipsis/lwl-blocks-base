@@ -44,35 +44,9 @@
 }
 
 /* Header */
-.wp-block-lwl-blocks-base-image-header-text>.components-grid.header
+.wp-block-lwl-blocks-base-image-header-text>.components-base-control.header
 {
    flex:1 1 16em;
-   grid-template:'lb lb' 'tg tx'/auto 1fr;
-   gap:0 0.25em;
-   align-items:flex-end;
-}
-
-.wp-block-lwl-blocks-base-image-header-text>.components-grid.header>.label
-{
-   grid-area:lb;
-   /*Followiig styles was copied from the .components-base-control__label:*/
-   font-size:11px;
-   font-weight:500;
-   line-height:1.4;
-   text-transform:uppercase;
-   display:block;
-   margin-bottom:8px;
-   padding:0px;
-}
-
-.wp-block-lwl-blocks-base-image-header-text>.components-grid.header>.header_tag
-{
-   grid-area:tg;
-}
-
-.wp-block-lwl-blocks-base-image-header-text>.components-grid.header>.header_text
-{
-   grid-area:tx;
 }
 
 /* Text */

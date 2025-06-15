@@ -5,9 +5,14 @@
 namespace LWL_Blocks;
 
 ?>
-<DIV <?=render_block_attributes($attributes)?>>
+<DIV <?=\render_block_attributes($attributes)?>>
    <?php
-    foreach ($block->inner_blocks as $key=>$inner_block)
-       echo $inner_block->render();
+   foreach ($block->inner_blocks as $key=>$inner_block)
+   {
+      if (!preg_match("/(^| )item( |$)/i",$inner_block->attributes["className"]))
+         $inner_block->attributes["className"]="item ".$inner_block->attributes["className"];
+
+      echo $inner_block->render();
+   }
    ?>
 </DIV>

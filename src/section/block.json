@@ -11,14 +11,16 @@
    "supports":{
                  "html":false,
                  "anchor":true,
+                 "className":true,
                  "background":{"backgroundImage":true}
               },
    "attributes":{
-                   "bg_image":{"type":"object"},
                    "anchor":{"type":"string"},
+                   "className":{"type":"string","default":""},
+                   "bg_image":{"type":"object"},
 						 "has_inner":{"type":"boolean","default":true},
-                   "inner_bg_image":{"type":"object"},
-						 "inner_className":{"type":"string","default":"inner"}
+						 "inner_className":{"type":"string","default":"inner"},
+                   "inner_bg_image":{"type":"object"}
 				    },
    "parent":[],
    "textdomain":"lwl-blocks-base",

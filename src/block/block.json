@@ -10,10 +10,12 @@
    "example":{},
    "supports":{
                  "html":false,
-                 "anchor":true
+                 "anchor":true,
+                 "className":true
               },
    "attributes":{
                    "anchor":{"type":"string"},
+                   "className":{"type":"string","default":""},
                    "allowedBlocks":{"type":"array","default":[]}
 				    },
    "textdomain":"lwl-blocks-base",

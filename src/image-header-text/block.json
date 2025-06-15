@@ -11,12 +11,14 @@
    "supports":{
                  "html":false,
                  "anchor":true,
-                 "className":{"type":"string","default":"item"}
+                 "className":true
               },
    "attributes":{
                    "anchor":{"type":"string"},
+                   "className":{"type":"string","default":""},
+                   "image_tag":{"type":"string","enum":["img","div","figure"],"default":"img"},
                    "image":{"type":"object"},
-                   "header_tag":{"type":"string","enum":["H2","H3","H4","H5","H6","DIV"],"default":3},
+                   "header_tag":{"type":"string","enum":["h2","h3","h4","h5","h6","div"],"default":"h3"},
                    "header_text":{"type":"string"}
 				    },
    "textdomain":"lwl-blocks-base",

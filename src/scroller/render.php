@@ -3,14 +3,26 @@
  * @see https://github.com/WordPress/gutenberg/blob/trunk/docs/reference-guides/block-api/block-metadata.md#render
  */
 namespace LWL_Blocks;
-$attributes["content_className"]="content ".$attributes["content_className"]
+
+$attributes["scrolling_speed"]=$attributes["scrolling_speed_val"].$attributes["scrolling_speed_unit"];
+$root_block_attrs=\render_block_attributes($attributes,attrs_map:["anchor"=>"id","className"=>"class","style"=>"style","scrolling_speed"=>"data-speed","scrolling_cycled"=>"data-cycled","scrolling_shortcuts"=>"data-shortcuts"]);
+
+if (!\preg_match("/(^| )content( |$)/i",$attributes["content_className"]))
+   $attributes["content_className"]="content ".$attributes["content_className"];
+$content_block_attrs=\render_block_attributes($attributes,attrs_prefix:"content_");
+
 ?>
-<DIV <?=render_block_attributes($attributes,attrs_map:["anchor"=>"id","className"=>"class","style"=>"style","data-speed"=>"data-speed","data-cycled"=>"data-cycled"])?>>
+<DIV <?=$root_block_attrs?>>
    <DIV CLASS="area">
-      <DIV <?=render_block_attributes($attributes,attrs_prefix:"content_")?>>
+      <DIV <?=$content_block_attrs?>>
          <?php
-          foreach ($block->inner_blocks as $key=>$inner_block)
-             echo $inner_block->render();
+         foreach ($block->inner_blocks as $key=>$inner_block)
+         {
+            if (!preg_match("/(^| )item( |$)/i",$inner_block->attributes["className"]))
+               $inner_block->attributes["className"]="item ".$inner_block->attributes["className"];
+
+            echo $inner_block->render();
+         }
          ?>
       </DIV>
    </DIV>
