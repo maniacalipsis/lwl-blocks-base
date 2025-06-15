@@ -4,9 +4,6 @@ import { registerBlockType } from '@wordpress/blocks';
 import {edit,save} from './edit';
 import metadata from './block.json';
 
-//Public styles:
-import './style.scss';
-
 registerBlockType(metadata.name,
                   {
                      edit:edit,
