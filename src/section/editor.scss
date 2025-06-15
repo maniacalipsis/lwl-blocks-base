@@ -2,6 +2,7 @@
 {
    --block-padding-h:0.5em;
 
+   box-sizing:border-box;
    border:1px solid #666666;
 }
 
@@ -27,4 +28,34 @@
 {
    padding:0.25em var(--block-padding-h);
    background:linear-gradient(0deg,#00000042,#0000000E);
+}
+
+/* InspectorControls: Image selectors */
+.block-editor-block-inspector .components-panel.lwl-blocks-base-section .components-base-control.image
+{
+   flex:0 0 auto;
+}
+
+.block-editor-block-inspector .components-panel.lwl-blocks-base-section .components-base-control.image>.components-base-control__field>button
+{
+   position:relative;
+   padding:0.5em 0.5em;
+   border:1px solid #666666;
+   background:none #0000000F;
+}
+.block-editor-block-inspector .components-panel.lwl-blocks-base-section .components-base-control.image>.components-base-control__field>button:has(img)
+{
+   width:100%;
+   height:8em;
+}
+
+.block-editor-block-inspector .components-panel.lwl-blocks-base-section .components-base-control.image>.components-base-control__field>button>img
+{
+   position:absolute;
+   top:0;
+   left:0;
+   width:100%;
+   height:100%;
+   object-fit:cover;
+   object-position:center;
 }

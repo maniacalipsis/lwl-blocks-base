@@ -1,0 +1,82 @@
+/**
+ * The following styles get applied inside the editor only.
+ *
+ * Replace them with your own styles or remove the file completely.
+ */
+
+.wp-block-lwl-blocks-base-image-header-string
+{
+   box-sizing:border-box;
+   width:auto!important;   /*Fix native style that says width:100% that leads block to overflow.*/
+   padding:0.25em 0.5em;
+   border:1px solid #666666;
+   background:none #00000004;
+}
+
+/* Image */
+.wp-block-lwl-blocks-base-image-header-string>.components-base-control.image
+{
+   flex:0 0 auto;
+}
+
+.wp-block-lwl-blocks-base-image-header-string>.components-base-control.image>.components-base-control__field>button
+{
+   position:relative;
+   padding:0.5em 0.5em;
+   border:1px solid #666666;
+   background:none #0000000F;
+}
+.wp-block-lwl-blocks-base-image-header-string>.components-base-control.image>.components-base-control__field>button:has(img)
+{
+   width:8em;
+   height:8em;
+}
+
+.wp-block-lwl-blocks-base-image-header-string>.components-base-control.image>.components-base-control__field>button>img
+{
+   position:absolute;
+   top:0;
+   left:0;
+   width:100%;
+   height:100%;
+   object-fit:cover;
+   object-position:center;
+}
+
+/* Header */
+.wp-block-lwl-blocks-base-image-header-string>.components-grid.header
+{
+   flex:1 1 16em;
+   grid-template:'lb lb' 'tg tx'/auto 1fr;
+   gap:0 0.25em;
+   align-items:flex-end;
+}
+
+.wp-block-lwl-blocks-base-image-header-string>.components-grid.header>.label
+{
+   grid-area:lb;
+   /*Followiig styles was copied from the .components-base-control__label:*/
+   font-size:11px;
+   font-weight:500;
+   line-height:1.4;
+   text-transform:uppercase;
+   display:block;
+   margin-bottom:8px;
+   padding:0px;
+}
+
+.wp-block-lwl-blocks-base-image-header-string>.components-grid.header>.header_tag
+{
+   grid-area:tg;
+}
+
+.wp-block-lwl-blocks-base-image-header-string>.components-grid.header>.header_text
+{
+   grid-area:tx;
+}
+
+/* Text */
+.wp-block-lwl-blocks-base-image-header-string>.components-base-control.text
+{
+   flex:1 1 100%;
+}

@@ -5,7 +5,7 @@ import {
           InspectorControls,
        } from '@wordpress/block-editor';
 import {
-          getBlockType,
+          getBlockTypes,
        } from '@wordpress/blocks';
 import {
           Panel,
@@ -13,23 +13,22 @@ import {
           SelectControl,
        } from '@wordpress/components';
 
+import metadata from './block.json';
 import './editor.scss';
 
-export function Edit(props_)
-{
-   let blockDef=getBlockType(props_.name);
-   //console.log(blockDef);
 
-   let contentBlocksTypeOptions=[];
-   for (let blockName of blockDef.attributes.content_blocks_type.enum)
-      contentBlocksTypeOptions.push({value:blockName,label:__(getBlockType(blockName)?.title,'lwl-blocks-base')});
+export function edit(props_)
+{
+   const txtD=metadata.textdomain; //Shorthand for translation text-domain.
+
+   const contentBlocksTypeOptions=getBlockTypes().map(blockType_=>({value:blockType_.name,label:blockType_.title}));  //NOTE: Currently, the purpose of content_blocks_type is to make editing less error prone by preventing a child blocks of the different types to be inserted, rather than to restrict which block types can be inserted.
 
    return (
       <>
          <InspectorControls>
             <Panel>
-               <PanelBody title={__(blockDef.title+' settings','lwl-blocks-base')}>
-                  <SelectControl value={props_.attributes.content_blocks_type} options={contentBlocksTypeOptions} onChange={(newVal_)=>props_.setAttributes({content_blocks_type:newVal_})} label={__('Inner\'s additional CSS class[es]','lwl-blocks-base')} help={__('Separate multiple classes with spaces.')}/>
+               <PanelBody title={__(metadata.title+' layout',txtD)}>
+                  <SelectControl label={__('Items type',txtD)} value={props_.attributes.content_blocks_type} options={contentBlocksTypeOptions} onChange={(newVal_)=>{props_.setAttributes({content_blocks_type:newVal_});}}/>
                </PanelBody>
             </Panel>
          </InspectorControls>
@@ -40,7 +39,7 @@ export function Edit(props_)
    );
 }
 
-export function Save()
+export function save()
 {
    return (
       <div {...useBlockProps.save()}>

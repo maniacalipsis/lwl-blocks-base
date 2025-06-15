@@ -8,8 +8,9 @@ yarn-error.log*
 # Coverage directory used by tools like istanbul
 coverage
 
-# Compiled binary addons (https://nodejs.org/api/addons.html)
-build/Release
+# Compiled and generated
+/build
+/package-lock.json
 
 # Dependency directories
 node_modules/

@@ -1,12 +1,12 @@
 {
    "$schema":"https://schemas.wp.org/trunk/block.json",
    "apiVersion":3,
-   "name":"lwl-blocks-base/items-list",
+   "name":"lwl-blocks-base/scroller",
    "version":"1.0.0",
-   "title":"Items List",
+   "title":"Scroller",
    "category":"design",
-   "icon":"grid-view",
-   "description":"All its inner blocks has to be one of certain types.",
+   "icon":"leftright",
+   "description":"Items scroller",
    "example":{},
    "supports":{
                  "html":false,
@@ -17,7 +17,13 @@
                    "content_blocks_type":{
                                             "type":"string",
                                             "default":"lwl-blocks-base/image-header-text"
-                                         }
+                                         },
+                   "content_className":{"type":"string","default":""},
+                   "has_buttons":{"type":"boolean","default":true},
+                   "scrolling_speed_val":{"type":"string","default":"100"},
+                   "scrolling_speed_unit":{"type":"string","default":"%","enum":["%","vw","em","px"],"default":"%"},
+                   "scrolling_cycled":{"type":"boolean","default":true},
+                   "scrolling_shortcuts":{"type":"string","default":""}
 				    },
    "textdomain":"lwl-blocks-base",
    "editorScript":"file:./index.js",

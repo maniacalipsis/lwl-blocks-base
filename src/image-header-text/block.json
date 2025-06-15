@@ -4,9 +4,9 @@
    "name":"lwl-blocks-base/image-header-text",
    "version":"1.0.0",
    "title":"Image-Header-Text",
+   "description":"List of items with image, header and formatted text (provided by inner blocks)",
    "category":"design",
    "icon":"analytics",
-   "description":"List of items with image, header and text",
    "example":{},
    "supports":{
                  "html":false,
@@ -16,9 +16,8 @@
    "attributes":{
                    "anchor":{"type":"string"},
                    "image":{"type":"object"},
-                   "header":{"type":"string"},
-                   "header_level":{"type":"integer","enum":[2,3,4,5,6,-1],"default":3},
-                   "text":{"type":"string"}
+                   "header_tag":{"type":"string","enum":["H2","H3","H4","H5","H6","DIV"],"default":3},
+                   "header_text":{"type":"string"}
 				    },
    "textdomain":"lwl-blocks-base",
    "editorScript":"file:./index.js",

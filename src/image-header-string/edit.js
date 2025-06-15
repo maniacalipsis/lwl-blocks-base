@@ -1,11 +1,12 @@
 import {__} from '@wordpress/i18n';   //Translations module.
 import {
           useBlockProps,
-          InspectorControls,
           MediaUploadCheck,
           MediaUpload,
-          InnerBlocks,
        } from '@wordpress/block-editor';
+import {
+          getBlockType,
+       } from '@wordpress/blocks';
 import {
           Flex,
           __experimentalGrid as Grid,
@@ -44,9 +45,7 @@ export function edit(props_)
                <SelectControl className="header_tag" title={__('HTML tag',txtD)} value={props_.attributes.header_tag} options={headerTagOptions} onChange={(newVal_)=>props_.setAttributes({header_tag:newVal_})}/>
                <TextControl className="header_text" title={__('Header text',txtD)} value={props_.attributes.header_text} onChange={(newVal_)=>props_.setAttributes({header_text:newVal_})} />
             </Grid>
-            <BaseControl label={__('Text',txtD)} className="text">
-               <InnerBlocks allowedBlocks={['core/paragraph','core/list','core/details','core/buttons','core/quote']} defaultBlock={['core/paragraph',{placeholder:__('Text',txtD)+'...'}]}/>
-            </BaseControl>
+            <TextControl className="text" label={__('Text',txtD)} value={props_.attributes.text} onChange={(newVal_)=>props_.setAttributes({text:newVal_})}/>
          </Flex>
       </>
    );
@@ -55,8 +54,6 @@ export function edit(props_)
 export function save()
 {
    return (
-      <div {...useBlockProps.save()}>
-         <InnerBlocks.Content />
-      </div>
+      <div {...useBlockProps.save()}></div>
    );
 }

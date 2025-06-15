@@ -10,6 +10,7 @@
  * License:           GPL-3.0
  * License URI:       https://www.gnu.org/licenses/gpl-3.0.html
  * Text Domain:       lwl-blocks-base
+ * Requires Plugins:  Utlilties: 2.3
  *
  * @package CreateBlock
  */
@@ -18,8 +19,6 @@ namespace LWL_Blocks\Init;
 
 if (!defined("ABSPATH"))
    exit; // Exit if accessed directly.
-
-require_once(__DIR__."/functions.php");   //Include utility functions.
 
 /**
  * Registers the block using a `blocks-manifest.php` file, which improves the performance of block type registration.

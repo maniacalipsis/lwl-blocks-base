@@ -1,26 +1,25 @@
 {
    "$schema":"https://schemas.wp.org/trunk/block.json",
    "apiVersion":3,
-   "name":"lwl-blocks-base/section",
+   "name":"lwl-blocks-base/image-header-string",
    "version":"1.0.0",
-   "title":"Section",
+   "title":"Image-Header-String",
    "category":"design",
-   "icon":"layout",
-   "description":"Page section",
+   "icon":"analytics",
+   "description":"List of items with image, header and unformatted text",
    "example":{},
    "supports":{
                  "html":false,
                  "anchor":true,
-                 "background":{"backgroundImage":true}
+                 "className":{"type":"string","default":"item"}
               },
    "attributes":{
-                   "bg_image":{"type":"object"},
                    "anchor":{"type":"string"},
-						 "has_inner":{"type":"boolean","default":true},
-                   "inner_bg_image":{"type":"object"},
-						 "inner_className":{"type":"string","default":"inner"}
+                   "image":{"type":"object"},
+                   "header_tag":{"type":"string","enum":["H2","H3","H4","H5","H6","DIV"],"default":3},
+                   "header_text":{"type":"string"},
+                   "text":{"type":"string"}
 				    },
-   "parent":[],
    "textdomain":"lwl-blocks-base",
    "editorScript":"file:./index.js",
    "editorStyle":"file:./index.css",

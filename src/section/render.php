@@ -5,8 +5,8 @@
 namespace LWL_Blocks;
 
 ?>
-<SECTION <?=render_attributes($attributes)?>>
-   <DIV <?=render_attributes($attributes,attrs_prefix:"inner_")?>>
+<SECTION <?=render_block_attributes($attributes)?>>
+   <DIV <?=render_block_attributes($attributes,attrs_prefix:"inner_")?>>
    <?php
     foreach ($block->inner_blocks as $key=>$inner_block)
        echo $inner_block->render();
