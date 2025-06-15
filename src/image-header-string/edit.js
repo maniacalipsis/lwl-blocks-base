@@ -1,6 +1,7 @@
 import {__} from '@wordpress/i18n';   //Translations module.
 import {
           useBlockProps,
+          InspectorControls,
           MediaUploadCheck,
           MediaUpload,
        } from '@wordpress/block-editor';
