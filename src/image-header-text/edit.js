@@ -25,8 +25,8 @@ export function edit(props_)
    const txtD=metadata.textdomain; //Shorthand for translation text-domain.
    const inspectorPanelClassName=props_.name.replace('/','-');
 
-   const headerTagOptions=metadata.attributes.header_tag.enum.map(tagName_=>({value:tagName_,label:__(tagName_,txtD)}));
    const imageTagOptions =metadata.attributes.image_tag .enum.map(tagName_=>({value:tagName_,label:__(tagName_,txtD)}));
+   const headerTagOptions=metadata.attributes.header_tag.enum.map(tagName_=>({value:tagName_,label:__(tagName_,txtD)}));
 
    return (
       <>

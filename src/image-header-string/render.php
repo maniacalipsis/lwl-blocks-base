@@ -7,7 +7,7 @@ namespace LWL_Blocks;
 $root_block_attrs=\render_block_attributes($attributes);
 $img_url=\htmlspecialchars($attributes["image"]["url"]);
 $img_alt=\htmlspecialchars($attributes["image"]["alt"]);
-
+$header_tag=strtoupper(preg_replace("/[^a-z0-9]/","",$attributes["header_tag"]));
 ?>
 <DIV <?=$root_block_attrs?>>
    <?php
@@ -31,39 +31,7 @@ $img_alt=\htmlspecialchars($attributes["image"]["alt"]);
       }
    }
    //Header:
-   switch ($attributes["image_tag"])
-   {
-      case "h2":
-      {
-         ?><H2 CLASS="header"><?=$attributes["header_text"]?></H2><?php
-         break;
-      }
-      case "h3":
-      {
-         ?><H3 CLASS="header"><?=$attributes["header_text"]?></H3><?php
-         break;
-      }
-      case "h4":
-      {
-         ?><H4 CLASS="header"><?=$attributes["header_text"]?></H4><?php
-         break;
-      }
-      case "h5":
-      {
-         ?><H5 CLASS="header"><?=$attributes["header_text"]?></H5><?php
-         break;
-      }
-      case "h6":
-      {
-         ?><H6 CLASS="header"><?=$attributes["header_text"]?></H6><?php
-         break;
-      }
-      case "div":
-      default: //Default is fallback option.
-      {
-         ?><DIV CLASS="header"><?=$attributes["header_text"]?></DIV><?php
-      }
-   }
    ?>
+   <<?=$header_tag?> CLASS="header"><?=$attributes["header_text"]?></<?=$header_tag?>>
    <DIV CLASS="text"><?=$attributes["text"]?></DIV>
 </DIV>
