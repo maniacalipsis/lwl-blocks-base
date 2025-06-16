@@ -10,19 +10,19 @@ switch ($attributes["tag"])
    case "button":
    {
       $tag_name="BUTTON";
-      $attrs_map=["id"=>"id","className"=>"class","title"=>"title","style"=>"style","onclick"=>"onclick"];
+      $attrs_map=["anchor"=>"id","className"=>"class","title"=>"title","style"=>"style","onclick"=>"onclick"];
       break;
    }
    case "a":
    default:
    {
       $tag_name="A";
-      $attrs_map=["id"=>"id","className"=>"class","url"=>"href","target"=>"target","rel"=>"rel","title"=>"title","style"=>"style","onclick"=>"onclick"];
+      $attrs_map=["anchor"=>"id","className"=>"class","url"=>"href","target"=>"target","rel"=>"rel","title"=>"title","style"=>"style","onclick"=>"onclick"];
       break;
    }
 }
 //Set glyph as background:
-if ($attributes["image"]["url"]??null)
+if ($attributes["image"])
    $attributes["style"]="background-image:url('".\htmlspecialchars($attributes["image"]["url"])."')";
 
 $root_block_attrs=\render_block_attributes($attributes,attrs_map:$attrs_map);

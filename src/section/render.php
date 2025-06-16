@@ -4,7 +4,12 @@
  */
 namespace LWL_Blocks;
 
+if ($attributes["bg_image"])
+   $attributes["style"]="background-image:url('".\htmlspecialchars($attributes["bg_image"]["url"])."')";
 $root_block_attrs=\render_block_attributes($attributes);
+
+if ($attributes["inner_bg_image"])
+   $attributes["inner_style"]="background-image:url('".\htmlspecialchars($attributes["inner_bg_image"]["url"])."')";
 $inner_block_attrs=\render_block_attributes($attributes,attrs_prefix:"inner_");
 ?>
 <SECTION <?=$root_block_attrs?>>
