@@ -21,8 +21,8 @@
 
 .wp-block-lwl-blocks-base-image>.components-base-control.image>.components-base-control__field
 {
-   margin-bottom:0;
    position:relative;
+   margin-bottom:0;
 }
 
 .wp-block-lwl-blocks-base-image>.components-base-control.image>.components-base-control__field>button.set_image
@@ -47,7 +47,6 @@
    object-position:center;
 }
 
-
 .wp-block-lwl-blocks-base-image>.components-base-control.image>.components-base-control__field>button.unset_image
 {
    position:absolute;
@@ -60,10 +59,11 @@
    line-height:1;
    color:#d41b1f;
    border-radius:0.5em;
+   background:none #d41b1f20;
    opacity:0.6;
 }
 .wp-block-lwl-blocks-base-image>.components-base-control.image>.components-base-control__field>button.unset_image:hover
 {
-   background:none #d41b1f40;
+   background:none #d4abaf;
    opacity:1;
 }

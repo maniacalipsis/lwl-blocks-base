@@ -46,7 +46,8 @@ export function edit(props_)
                   allowedTypes={['image']}
                   render={({open})=>(
                                        <BaseControl className="image">
-                                          <Button onClick={open}>{props_.attributes.image ? <img src={props_.attributes.image.url}/> : __('Select Image', txtD)}</Button>
+                                          <Button className="set_image" onClick={open}>{props_.attributes.image ? <img src={props_.attributes.image.url}/> : __('Select Image', txtD)}</Button>
+                                          {props_.attributes.image&&<Button className="unset_image" onClick={(e_)=>{props_.setAttributes({image:null});}}>☒</Button>}
                                        </BaseControl>
                                     )}
                   onSelect={(media_)=>{props_.setAttributes({image:{id:media_.id,url:media_.url,alt:media_.alt,filename:media_.filename}})}}

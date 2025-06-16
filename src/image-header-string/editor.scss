@@ -19,28 +19,54 @@
    flex:0 0 auto;
 }
 
-.wp-block-lwl-blocks-base-image-header-string>.components-base-control.image>.components-base-control__field>button
+.wp-block-lwl-blocks-base-image-header-string>.components-base-control.image>.components-base-control__field
+{
+   position:relative;
+}
+
+.wp-block-lwl-blocks-base-image-header-string>.components-base-control.image>.components-base-control__field>button.set_image
 {
    position:relative;
    padding:0.5em 0.5em;
    border:1px solid #666666;
    background:none #0000000F;
 }
-.wp-block-lwl-blocks-base-image-header-string>.components-base-control.image>.components-base-control__field>button:has(img)
+.wp-block-lwl-blocks-base-image-header-string>.components-base-control.image>.components-base-control__field>button.set_image:has(img)
 {
    width:8em;
    height:8em;
 }
 
-.wp-block-lwl-blocks-base-image-header-string>.components-base-control.image>.components-base-control__field>button>img
+.wp-block-lwl-blocks-base-image-header-string>.components-base-control.image>.components-base-control__field>button.set_image>img
 {
    position:absolute;
    top:0;
    left:0;
    width:100%;
    height:100%;
-   object-fit:cover;
+   object-fit:contain;
    object-position:center;
+}
+
+.wp-block-lwl-blocks-base-image-header-string>.components-base-control.image>.components-base-control__field>button.unset_image
+{
+   position:absolute;
+   top:0;
+   right:0;
+   height:2em;
+   width:2em;
+   padding:0.5em;
+   font-size:120%;
+   line-height:1;
+   color:#d41b1f;
+   border-radius:0.5em;
+   background:none #d41b1f20;
+   opacity:0.6;
+}
+.wp-block-lwl-blocks-base-image-header-string>.components-base-control.image>.components-base-control__field>button.unset_image:hover
+{
+   background:none #d4abaf;
+   opacity:1;
 }
 
 /* Header */

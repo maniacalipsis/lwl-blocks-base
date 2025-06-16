@@ -26,6 +26,7 @@ export function edit(props_)
    const txtD=metadata.textdomain; //Shorthand for translation text-domain.
    const inspectorPanelClassName=props_.name.replace('/','-');
 
+   const rootTagOptions=metadata.attributes.root_tag .enum.map(tagName_=>({value:tagName_,label:__(tagName_,txtD)}));
    const contentBlocksTypeOptions=getBlockTypes().map(blockType_=>({value:blockType_.name,label:blockType_.title}));  //NOTE: Currently, the purpose of content_blocks_type is to make editing less error prone by preventing a child blocks of the different types to be inserted, rather than to restrict which block types can be inserted.
    const speedUnitOptions=metadata.attributes.scrolling_speed_unit.enum.map(unit_=>({value:unit_,label:__(unit_,txtD)}));
 
@@ -34,6 +35,7 @@ export function edit(props_)
          <InspectorControls>
             <Panel className={inspectorPanelClassName}>
                <PanelBody title={__(metadata.title+' layout',txtD)}>
+                  <SelectControl label={__('Root HTML tag',txtD)} className="root_tag" value={props_.attributes.root_tag} options={rootTagOptions} onChange={(newVal_)=>props_.setAttributes({root_tag:newVal_})}/>
                   <SelectControl label={__('Items type',txtD)} value={props_.attributes.content_blocks_type} options={contentBlocksTypeOptions} onChange={(newVal_)=>props_.setAttributes({content_blocks_type:newVal_})}/>
                   <CheckboxControl label={__('Has Left/Right buttons',txtD)} checked={props_.attributes.has_buttons} onChange={(newVal_)=>props_.setAttributes({has_buttons:newVal_})} />
                   <TextControl label={__('Content block\'s additional CSS class[es]',txtD)} value={props_.attributes.content_className} onChange={(newVal_)=>props_.setAttributes({content_className:newVal_})} help={__('Separate multiple classes with spaces.')}/>

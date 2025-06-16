@@ -16,6 +16,7 @@
    "attributes":{
                    "anchor":{"type":"string"},
                    "className":{"type":"string","default":""},
+                   "root_tag":{"type":"string","enum":["div","section"],"default":"div"},
                    "content_blocks_type":{
                                             "type":"string",
                                             "default":"lwl-blocks-base/image-header-text"

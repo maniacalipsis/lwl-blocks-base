@@ -34,7 +34,8 @@ export function edit(props_)
                         allowedTypes={['image']}
                         render={({open})=>(
                                              <BaseControl className="image bg" label={__('Background Image',txtD)}>
-                                                <Button onClick={open}>{props_.attributes.bg_image ? <img src={props_.attributes.bg_image.url}/> : __('Select Image', txtD)}</Button>
+                                                <Button className="set_image" onClick={open}>{props_.attributes.bg_image ? <img src={props_.attributes.bg_image.url}/> : __('Select Image', txtD)}</Button>
+                                                {props_.attributes.bg_image&&<Button className="unset_image" onClick={(e_)=>{props_.setAttributes({bg_image:null});}}>☒</Button>}
                                              </BaseControl>
                                           )}
                         onSelect={(media_)=>{props_.setAttributes({bg_image:{id:media_.id,url:media_.url,alt:media_.alt,filename:media_.filename}})}}
@@ -47,7 +48,8 @@ export function edit(props_)
                            allowedTypes={['image']}
                            render={({open})=>(
                                                 <BaseControl className="image inner_bg" label={__('Inner\'s Background Image',txtD)}>
-                                                   <Button onClick={open}>{props_.attributes.inner_bg_image ? <img src={props_.attributes.inner_bg_image.url}/> : __('Select Image', txtD)}</Button>
+                                                   <Button className="set_image" onClick={open}>{props_.attributes.inner_bg_image ? <img src={props_.attributes.inner_bg_image.url}/> : __('Select Image', txtD)}</Button>
+                                                   {props_.attributes.inner_bg_image&&<Button className="unset_image" onClick={(e_)=>{props_.setAttributes({inner_bg_image:null});}}>☒</Button>}
                                                 </BaseControl>
                                              )}
                            onSelect={(media_)=>{props_.setAttributes({inner_bg_image:{id:media_.id,url:media_.url,alt:media_.alt,filename:media_.filename}})}}
