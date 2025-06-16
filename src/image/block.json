@@ -1,0 +1,27 @@
+{
+   "$schema":"https://schemas.wp.org/trunk/block.json",
+   "apiVersion":3,
+   "name":"lwl-blocks-base/image",
+   "version":"1.0.0",
+   "title":"Bare Image",
+   "category":"design",
+   "icon":"image",
+   "description":"Image element w/o <figure> wrap.",
+   "example":{},
+   "supports":{
+                 "html":false,
+                 "anchor":true,
+                 "className":true
+              },
+   "attributes":{
+                   "anchor":{"type":"string"},
+                   "className":{"type":"string","default":""},
+                   "image_tag":{"type":"string","enum":["img","div"],"default":"img"},
+                   "image":{"type":"object"}
+				    },
+   "textdomain":"lwl-blocks-base",
+   "editorScript":"file:./index.js",
+   "editorStyle":"file:./index.css",
+   "style":"file:./style-index.css",
+   "render":"file:./render.php"
+}

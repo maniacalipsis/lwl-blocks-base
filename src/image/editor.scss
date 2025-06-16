@@ -1,0 +1,69 @@
+/**
+ * The following styles get applied inside the editor only.
+ *
+ * Replace them with your own styles or remove the file completely.
+ */
+
+.wp-block-lwl-blocks-base-image
+{
+   box-sizing:border-box;
+   width:auto!important;   /*Fix native style that says width:100% that leads block to overflow.*/
+   padding:0.25em 0.5em;
+   border:1px solid #666666;
+   background:none #00000004;
+}
+
+/* Image */
+.wp-block-lwl-blocks-base-image>.components-base-control.image
+{
+   flex:1 1 auto;
+}
+
+.wp-block-lwl-blocks-base-image>.components-base-control.image>.components-base-control__field
+{
+   margin-bottom:0;
+   position:relative;
+}
+
+.wp-block-lwl-blocks-base-image>.components-base-control.image>.components-base-control__field>button.set_image
+{
+   position:relative;
+   width: 100%;
+   height: 10em;
+   max-height: 20em;
+   padding:0.5em 0.5em;
+   border:1px solid #666666;
+   background:none #0000000F;
+}
+
+.wp-block-lwl-blocks-base-image>.components-base-control.image>.components-base-control__field>button.set_image>img
+{
+   position:absolute;
+   top:0;
+   left:0;
+   width:100%;
+   height:100%;
+   object-fit:contain;
+   object-position:center;
+}
+
+
+.wp-block-lwl-blocks-base-image>.components-base-control.image>.components-base-control__field>button.unset_image
+{
+   position:absolute;
+   top:0;
+   right:0;
+   height:2em;
+   width:2em;
+   padding:0.5em;
+   font-size:120%;
+   line-height:1;
+   color:#d41b1f;
+   border-radius:0.5em;
+   opacity:0.6;
+}
+.wp-block-lwl-blocks-base-image>.components-base-control.image>.components-base-control__field>button.unset_image:hover
+{
+   background:none #d41b1f40;
+   opacity:1;
+}
