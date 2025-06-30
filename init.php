@@ -10,7 +10,7 @@
  * License:           GPL-3.0
  * License URI:       https://www.gnu.org/licenses/gpl-3.0.html
  * Text Domain:       lwl-blocks-base
- * Requires Plugins:  Utlilties: 2.3
+ * Requires Plugins:  Utilities: 2.3
  *
  * @package CreateBlock
  */

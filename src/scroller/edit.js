@@ -41,7 +41,8 @@ export function edit(props_)
                   <TextControl label={__('Content block\'s additional CSS class[es]',txtD)} value={props_.attributes.content_className} onChange={(newVal_)=>props_.setAttributes({content_className:newVal_})} help={__('Separate multiple classes with spaces.')}/>
                </PanelBody>
                <PanelBody title={__(metadata.title+' animation',txtD)}>
-                  <BaseControl label={__('Scrolling speed',txtD)} className="speed" help={__('Speed is a distance which content block moves per iteration. The % are counted from the current area width.')}>
+                  <NumberControl label={__('Interval',txtD)} className="interval" value={props_.attributes.scrolling_interval} onChange={(newVal_)=>props_.setAttributes({scrolling_interval:newVal_})} help={__('Time in milliseconds between animation iterations. Set 0 to stop animation. Note that too small values >0 may slow browser.',txtD)}/>
+                  <BaseControl label={__('Speed',txtD)} className="speed" help={__('Speed is a distance which content block moves per iteration. The % are counted from the current area width.')}>
                      <NumberControl className="val" value={props_.attributes.scrolling_speed_val} onChange={(newVal_)=>props_.setAttributes({scrolling_speed_val:newVal_})}/>
                      <SelectControl className="unit" value={props_.attributes.scrolling_speed_unit} options={speedUnitOptions} onChange={(newVal_)=>props_.setAttributes({scrolling_speed_unit:newVal_})}/>
                   </BaseControl>

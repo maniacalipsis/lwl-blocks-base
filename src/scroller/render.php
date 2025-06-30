@@ -6,7 +6,7 @@ namespace LWL_Blocks;
 
 $root_tag=strtoupper(preg_replace("/[^a-z0-9]/","",$attributes["root_tag"]));
 $attributes["scrolling_speed"]=$attributes["scrolling_speed_val"].$attributes["scrolling_speed_unit"];
-$root_block_attrs=\render_block_attributes($attributes,attrs_map:["anchor"=>"id","className"=>"class","style"=>"style","scrolling_speed"=>"data-speed","scrolling_cycled"=>"data-cycled","scrolling_shortcuts"=>"data-shortcuts"]);
+$root_block_attrs=\render_block_attributes($attributes,attrs_map:["anchor"=>"id","className"=>"class","style"=>"style","scrolling_interval"=>"data-interval","scrolling_speed"=>"data-speed","scrolling_cycled"=>"data-cycled","scrolling_shortcuts"=>"data-shortcuts"]);
 
 if (!\preg_match("/(^| )content( |$)/i",$attributes["content_className"]))
    $attributes["content_className"]="content ".$attributes["content_className"];

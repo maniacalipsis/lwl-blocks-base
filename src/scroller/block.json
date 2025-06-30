@@ -24,8 +24,9 @@
                    "templateLock":{"type":"string","enum":["","all","insert","contentOnly"],"default":""},
                    "content_className":{"type":"string","default":""},
                    "has_buttons":{"type":"boolean","default":true},
-                   "scrolling_speed_val":{"type":"string","default":"100"},
-                   "scrolling_speed_unit":{"type":"string","default":"%","enum":["%","vw","em","px"],"default":"%"},
+                   "scrolling_interval":{"type":"integer","default":"10"},
+                   "scrolling_speed_val":{"type":"string","default":"1"},
+                   "scrolling_speed_unit":{"type":"string","enum":["%","vw","em","px"],"default":"px"},
                    "scrolling_cycled":{"type":"boolean","default":true},
                    "scrolling_shortcuts":{"type":"string","default":""}
 				    },
