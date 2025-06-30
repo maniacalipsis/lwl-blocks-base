@@ -1,9 +1,12 @@
 {
-   "name": "lwl-blocks-base",
+   "name": "@maniacalipsis/lwl-blocks-base",
    "version": "1.0.0",
    "description": "Light-Weight-Layout Blocks - Base collection",
    "author": "FSG a.k.a ManiaC",
    "license": "GPL-3.0",
+   "publishConfig": {
+      "registry": "https://npm.pkg.github.com"
+   },
    "main": "build/index.js",
    "scripts": {
       "build": "wp-scripts build --webpack-copy-php --blocks-manifest",
