@@ -1,0 +1,128 @@
+/*!**************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ../node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[4].use[1]!../node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[4].use[2]!../node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[4].use[3]!./src/button/editor.scss ***!
+  \**************************************************************************************************************************************************************************************************************************************************/
+@charset "UTF-8";
+/**
+ * The following styles get applied inside the editor only.
+ *
+ * Replace them with your own styles or remove the file completely.
+ */
+.wp-block-lwl-blocks-base-button {
+  box-sizing: border-box;
+  width: -moz-max-content !important;
+  width: max-content !important; /*Fix native style that says width:100% that leads block to overflow.*/
+  padding: 0.25em 0.28em 0.25em 0.5em;
+  gap: 0;
+  color: #FFFFFF;
+  border-radius: 1.2em;
+  border: 2px solid #000000;
+  background: none rgba(0, 0, 0, 0.5019607843);
+}
+
+/* Image */
+.wp-block-lwl-blocks-base-button > .components-base-control.image {
+  flex: 0 0 auto;
+}
+
+.wp-block-lwl-blocks-base-button > .components-base-control.image > .components-base-control__field {
+  position: relative;
+  margin-bottom: 0;
+}
+
+.wp-block-lwl-blocks-base-button > .components-base-control.image > .components-base-control__field:has(button.unset_image) {
+  padding-left: 2em;
+}
+
+.wp-block-lwl-blocks-base-button > .components-base-control.image > .components-base-control__field > button.set_image {
+  position: relative;
+  padding: 0.5em 0.5em;
+  color: rgba(255, 255, 255, 0.5019607843);
+  border: 1px dashed rgba(255, 255, 255, 0.4);
+  border-radius: 1.1em;
+  background: none;
+}
+
+.wp-block-lwl-blocks-base-button > .components-base-control.image > .components-base-control__field > button.set_image:has(img) {
+  width: 3em;
+  height: 3em;
+}
+
+.wp-block-lwl-blocks-base-button > .components-base-control.image > .components-base-control__field > button.set_image > img {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+  -o-object-position: center;
+     object-position: center;
+}
+
+.wp-block-lwl-blocks-base-button > .components-base-control.image > .components-base-control__field > button.unset_image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2em;
+  width: 2em;
+  padding: 0.5em;
+  font-size: 120%;
+  line-height: 1;
+  color: #d41b1f;
+  border-radius: 0.5em;
+  background: none rgba(212, 27, 31, 0.1254901961);
+  opacity: 0.6;
+}
+
+.wp-block-lwl-blocks-base-button > .components-base-control.image > .components-base-control__field > button.unset_image:hover {
+  background: none #d4abaf;
+  opacity: 1;
+}
+
+/* Text */
+.wp-block-lwl-blocks-base-button > button.attrs_toggle {
+  flex: 1 0 5em;
+  color: #FFFFFF;
+}
+
+.wp-block-lwl-blocks-base-button > button.attrs_toggle:empty::before {
+  content: ". . .";
+  display: inline;
+}
+
+.wp-block-lwl-blocks-base-button > button.attrs_toggle._blank::after {
+  content: "⇗";
+  display: inline;
+}
+
+.wp-block-lwl-blocks-base-button > button.attrs_toggle[title] {
+  -webkit-text-decoration: underline solid;
+          text-decoration: underline solid;
+}
+
+.wp-block-lwl-blocks-base-button > button.attrs_toggle:is([title^="tel:"], [title^="mailto:"]) {
+  -webkit-text-decoration: underline dotted;
+          text-decoration: underline dotted;
+}
+
+.wp-block-lwl-blocks-base-button > button.attrs_toggle[title^="#"] {
+  -webkit-text-decoration: underline dashed;
+          text-decoration: underline dashed;
+}
+
+/* PopOver*/
+.components-popover.lwl-blocks-base-button.is-positioned > .components-popover__content {
+  width: min(20em, 100vw);
+  padding: 1em;
+}
+
+.components-popover.lwl-blocks-base-button.is-positioned > .components-popover__content .components-checkbox-control.target {
+  margin: 1.5em 0 1em 0;
+}
+
+.components-popover.lwl-blocks-base-button.is-positioned > .components-popover__content a.help {
+  padding: 0.45em 0.5em;
+  margin-bottom: 0.6em;
+  border-radius: 0.5em;
+  background: rgba(0, 0, 0, 0.1254901961);
+}

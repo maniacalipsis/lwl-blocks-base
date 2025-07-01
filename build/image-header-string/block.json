@@ -1,0 +1,60 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "lwl-blocks-base/image-header-string",
+  "version": "1.0.0",
+  "title": "Image-Header-String",
+  "category": "design",
+  "icon": "analytics",
+  "description": "List of items with image, header and unformatted text",
+  "example": {},
+  "supports": {
+    "html": false,
+    "anchor": true,
+    "className": true
+  },
+  "attributes": {
+    "anchor": {
+      "type": "string"
+    },
+    "className": {
+      "type": "string",
+      "default": ""
+    },
+    "image_tag": {
+      "type": "string",
+      "enum": [
+        "img",
+        "div",
+        "figure"
+      ],
+      "default": "img"
+    },
+    "image": {
+      "type": "object"
+    },
+    "header_tag": {
+      "type": "string",
+      "enum": [
+        "h2",
+        "h3",
+        "h4",
+        "h5",
+        "h6",
+        "div"
+      ],
+      "default": "h3"
+    },
+    "header_text": {
+      "type": "string"
+    },
+    "text": {
+      "type": "string"
+    }
+  },
+  "textdomain": "lwl-blocks-base",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css",
+  "render": "file:./render.php"
+}

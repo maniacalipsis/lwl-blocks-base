@@ -1,0 +1,80 @@
+/*!***************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ../node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[4].use[1]!../node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[4].use[2]!../node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[4].use[3]!./src/image-header-string/editor.scss ***!
+  \***************************************************************************************************************************************************************************************************************************************************************/
+/**
+ * The following styles get applied inside the editor only.
+ *
+ * Replace them with your own styles or remove the file completely.
+ */
+.wp-block-lwl-blocks-base-image-header-string {
+  box-sizing: border-box;
+  width: auto !important; /*Fix native style that says width:100% that leads block to overflow.*/
+  padding: 0.25em 0.5em;
+  border: 1px solid #666666;
+  background: none rgba(0, 0, 0, 0.0156862745);
+}
+
+/* Image */
+.wp-block-lwl-blocks-base-image-header-string > .components-base-control.image {
+  flex: 0 0 auto;
+}
+
+.wp-block-lwl-blocks-base-image-header-string > .components-base-control.image > .components-base-control__field {
+  position: relative;
+}
+
+.wp-block-lwl-blocks-base-image-header-string > .components-base-control.image > .components-base-control__field > button.set_image {
+  position: relative;
+  padding: 0.5em 0.5em;
+  border: 1px solid #666666;
+  background: none rgba(0, 0, 0, 0.0588235294);
+}
+
+.wp-block-lwl-blocks-base-image-header-string > .components-base-control.image > .components-base-control__field > button.set_image:has(img) {
+  width: 8em;
+  height: 8em;
+}
+
+.wp-block-lwl-blocks-base-image-header-string > .components-base-control.image > .components-base-control__field > button.set_image > img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+  -o-object-position: center;
+     object-position: center;
+}
+
+.wp-block-lwl-blocks-base-image-header-string > .components-base-control.image > .components-base-control__field > button.unset_image {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 2em;
+  width: 2em;
+  padding: 0.5em;
+  font-size: 120%;
+  line-height: 1;
+  color: #d41b1f;
+  border-radius: 0.5em;
+  background: none rgba(212, 27, 31, 0.1254901961);
+  opacity: 0.6;
+}
+
+.wp-block-lwl-blocks-base-image-header-string > .components-base-control.image > .components-base-control__field > button.unset_image:hover {
+  background: none #d4abaf;
+  opacity: 1;
+}
+
+/* Header */
+.wp-block-lwl-blocks-base-image-header-string > .components-base-control.header {
+  flex: 1 1 16em;
+}
+
+/* Text */
+.wp-block-lwl-blocks-base-image-header-string > .components-base-control.text {
+  flex: 1 1 100%;
+}
+
+/*# sourceMappingURL=index.css.map*/

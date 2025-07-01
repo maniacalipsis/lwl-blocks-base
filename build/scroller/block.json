@@ -1,0 +1,86 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "lwl-blocks-base/scroller",
+  "version": "1.0.0",
+  "title": "Scroller",
+  "category": "design",
+  "icon": "leftright",
+  "description": "Items scroller",
+  "example": {},
+  "supports": {
+    "html": false,
+    "anchor": true,
+    "className": true
+  },
+  "attributes": {
+    "anchor": {
+      "type": "string"
+    },
+    "className": {
+      "type": "string",
+      "default": ""
+    },
+    "root_tag": {
+      "type": "string",
+      "enum": [
+        "div",
+        "section"
+      ],
+      "default": "div"
+    },
+    "content_blocks_type": {
+      "type": "string",
+      "default": "lwl-blocks-base/image-header-text"
+    },
+    "templateLock": {
+      "type": "string",
+      "enum": [
+        "",
+        "all",
+        "insert",
+        "contentOnly"
+      ],
+      "default": ""
+    },
+    "content_className": {
+      "type": "string",
+      "default": ""
+    },
+    "has_buttons": {
+      "type": "boolean",
+      "default": true
+    },
+    "scrolling_interval": {
+      "type": "integer",
+      "default": "10"
+    },
+    "scrolling_speed_val": {
+      "type": "string",
+      "default": "1"
+    },
+    "scrolling_speed_unit": {
+      "type": "string",
+      "enum": [
+        "%",
+        "vw",
+        "em",
+        "px"
+      ],
+      "default": "px"
+    },
+    "scrolling_cycled": {
+      "type": "boolean",
+      "default": true
+    },
+    "scrolling_shortcuts": {
+      "type": "string",
+      "default": ""
+    }
+  },
+  "textdomain": "lwl-blocks-base",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css",
+  "render": "file:./render.php"
+}

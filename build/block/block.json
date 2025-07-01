@@ -1,0 +1,44 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "lwl-blocks-base/block",
+  "version": "1.0.0",
+  "title": "Block",
+  "category": "design",
+  "icon": "block-default",
+  "description": "Just a simple block. An empty pot is simple item. It will not deisappear.",
+  "example": {},
+  "supports": {
+    "html": false,
+    "anchor": true,
+    "className": true
+  },
+  "attributes": {
+    "anchor": {
+      "type": "string"
+    },
+    "className": {
+      "type": "string",
+      "default": ""
+    },
+    "allowedBlocks": {
+      "type": "array",
+      "default": []
+    },
+    "templateLock": {
+      "type": "string",
+      "enum": [
+        "",
+        "all",
+        "insert",
+        "contentOnly"
+      ],
+      "default": ""
+    }
+  },
+  "textdomain": "lwl-blocks-base",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css",
+  "render": "file:./render.php"
+}

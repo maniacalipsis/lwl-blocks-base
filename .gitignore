@@ -9,7 +9,7 @@ yarn-error.log*
 coverage
 
 # Compiled and generated
-/build
+#/build
 /package-lock.json
 
 # Dependency directories
